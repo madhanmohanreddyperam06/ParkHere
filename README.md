@@ -1,31 +1,49 @@
-# Smart Parking Management System 🚗
+## ParkHere 
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B?style=flat-square&logo=streamlit)
+![Python](https://img.shields.io/badge/Python-3.7+-3776AB?style=flat-square&logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-2.0+-150458?style=flat-square&logo=pandas)
+![Plotly](https://img.shields.io/badge/Plotly-5.15+-3F4F75?style=flat-square&logo=plotly)
 
 A Python-based Smart Parking Management System that automatically assigns the nearest available parking slot to incoming vehicles, tracks vehicle entry and exit, and calculates parking charges based on duration.
 
-## 📋 Table of Contents
+## Table of Contents
 
+- [ParkHere](#parkhere)
+- [Table of Contents](#table-of-contents)
 - [Features](#features)
+  - [Core Features](#core-features)
+  - [Dashboard Analytics](#dashboard-analytics)
 - [Technology Stack](#technology-stack)
-- [Installation & Setup](#installation--setup)
+- [Installation \& Setup](#installation--setup)
+  - [Prerequisites](#prerequisites)
+  - [Installation Steps](#installation-steps)
 - [Project Structure](#project-structure)
 - [How to Use](#how-to-use)
+  - [1. Vehicle Entry](#1-vehicle-entry)
+  - [2. Vehicle Exit](#2-vehicle-exit)
+  - [3. Slot Status](#3-slot-status)
+  - [4. Analytics Dashboard](#4-analytics-dashboard)
 - [Fee Calculation Logic](#fee-calculation-logic)
 - [Slot Allocation Algorithm](#slot-allocation-algorithm)
 - [Data Storage](#data-storage)
+  - [slots.json](#slotsjson)
+  - [parking\_data.csv](#parking_datacsv)
 - [System Features](#system-features)
+  - [User Interface](#user-interface)
+  - [Analytics](#analytics)
+  - [System Management](#system-management)
 - [Evaluation Points (Hackathon Ready)](#evaluation-points-hackathon-ready)
 - [Future Enhancements](#future-enhancements)
 - [Troubleshooting](#troubleshooting)
-- [Contact](#-contact)
+  - [Common Issues](#common-issues)
+  - [Support](#support)
+- [Contact](#contact)
+  - [Madhan Mohan Reddy](#madhan-mohan-reddy)
 
 ## Features
 
-### 🎯 Core Features
+### Core Features
 
 - **Automatic Slot Allocation**: Greedy algorithm assigns the first available slot
 - **Vehicle Entry Management**: Track vehicle entry with automatic slot assignment
@@ -34,7 +52,7 @@ A Python-based Smart Parking Management System that automatically assigns the ne
 - **Real-time Slot Status**: Visual representation of parking slot availability
 - **Analytics Dashboard**: Comprehensive parking analytics with charts
 
-### 📊 Dashboard Analytics
+### Dashboard Analytics
 
 - Total parking slots overview
 - Occupancy rate visualization
@@ -172,21 +190,21 @@ TN09AB1234,P1,2024-03-08 10:15:00,2024-03-08 12:30:00,2.25,60
 
 ## System Features
 
-### 🎨 User Interface
+### User Interface
 
 - Clean, intuitive web interface
 - Tabbed navigation for different functions
 - Real-time updates without page refresh
 - Responsive design for all screen sizes
 
-### 📈 Analytics
+### Analytics
 
 - Interactive pie charts for occupancy visualization
 - Histogram for parking duration analysis
 - Real-time metrics display
 - Historical data tracking
 
-### 🔧 System Management
+### System Management
 
 - Automatic data persistence
 - Error handling for edge cases
@@ -233,12 +251,12 @@ For issues or questions, please check:
 
 ---
 
-## 📞 Contact
+## Contact
 
 ### Madhan Mohan Reddy
 
-- 📧 **Gmail**: [madhanmohanreddyperam06@gmail.com](mailto:madhanmohanreddyperam06@gmail.com)
-- 📱 **Mobile**: +91 9110395993
+- **Gmail**: [madhanmohanreddyperam06@gmail.com](mailto:madhanmohanreddyperam06@gmail.com)
+- **Mobile**: +91 9110395993
 
 ---
 
