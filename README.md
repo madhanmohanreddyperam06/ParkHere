@@ -7,7 +7,7 @@
 [![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-150458?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Plotly](https://img.shields.io/badge/Plotly-5.15%2B-3F4F75?style=flat-square&logo=plotly&logoColor=white)](https://plotly.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-2EA44F?style=flat-square)](LICENSE)
----
+
 </div>
 
 A Streamlit web application for managing end-to-end parking lot operations.
