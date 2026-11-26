@@ -521,10 +521,19 @@ AP09NV2345,P1,2026-03-15 20:08:39,2026-03-15 20:09:30,0.01,20,2026-03-15
 
 ## License & Contact
 
-Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for full terms (`Copyright (c) 2026 PERAM MADHAN MOHAN REDDY`).
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE)
 
-| Maintainer | Channel | Contact Details |
-| :--- | :--- | :--- |
-| **Madhan Mohan Reddy** | **Email** | [madhanmohanreddyperam06@gmail.com](mailto:madhanmohanreddyperam06@gmail.com) |
-| **Madhan Mohan Reddy** | **Mobile** | `+91 9110395993` |
+---
+
+## Contact Information
+
+### Madhan Mohan Reddy
+
+- **Email**: <madhanmohanreddyperam06@gmail.com>
+- **Mobile**: +91 9110395993
+
+---
+<div align="center">
+© 2026 Campus Finder. All rights reserved.
+</div>
 
