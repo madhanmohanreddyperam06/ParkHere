@@ -7,16 +7,16 @@
 [![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-150458?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Plotly](https://img.shields.io/badge/Plotly-5.15%2B-3F4F75?style=flat-square&logo=plotly&logoColor=white)](https://plotly.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-2EA44F?style=flat-square)](LICENSE)
-
-[Overview](#overview) · [Architecture](#system-architecture) · [Interactive Layouts](#interactive-ui--parking-layouts) · [Fee & Traffic Rules](#classifications--business-rules) · [Charts & Analytics](#visual-analytics--sample-insights) · [Setup](#installation--setup) · [Data Schemas](#data-storage--schemas) · [Reference](#api-reference--troubleshooting)
-
+---
 </div>
+
+A Streamlit web application for managing end-to-end parking lot operations.
 
 ---
 
 ## Overview
 
-**ParkHere** (`Smart Parking v1.0`) is a Python and Streamlit web application for managing end-to-end parking lot operations. It automatically assigns incoming vehicles to the nearest available slot (`P1`–`P10`), reconciles live slot occupancy with historical logs, computes ceiling-rounded hourly parking charges (`₹20/hour`, minimum `₹20`), and visualizes live utilization and daily revenue through interactive Plotly dashboards.
+**ParkHere** is a Python and Streamlit web application for managing end-to-end parking lot operations. It automatically assigns incoming vehicles to the nearest available slot (`P1`–`P10`), reconciles live slot occupancy with historical logs, computes ceiling-rounded hourly parking charges (`₹20/hour`, minimum `₹20`), and visualizes live utilization and daily revenue through interactive Plotly dashboards.
 
 ### Feature Classification
 
@@ -25,7 +25,7 @@
 | **Slot Allocation** | Greedy First-Available | Scans `P1` → `P10` sequentially and assigns the lowest-index free slot | `app.py` · Tab 1 |
 | **Entry & Exit** | Automated Lifecycle | Logs arrival timestamp, tracks active stays, calculates fee on exit, and frees slot | Tab 1 & Tab 2 |
 | **Billing Engine** | Hourly Ceiling Pricing | Rounds fractional hours up (`max(1, ceil(hours))`) at `₹20/hr` with `₹20` floor | `calculate_fee()` |
-| **Live Monitoring** | 5×2 Visual Slot Grid | Color-coded slot cards (`🟢 Available` / `🔴 Occupied`) + live dataframe table | Tab 3 |
+| **Live Monitoring** | 5×2 Visual Slot Grid | Color-coded slot cards (`Available` / ` Occupied`) + live dataframe table | Tab 3 |
 | **Analytics** | KPI & Chart Dashboard | 5 KPI cards, Plotly Donut & Duration Histogram, recent stays, daily revenue summary | Tab 4 |
 | **Control Panel** | Collapsible Sidebar | Live quick stats, fee rate card, clock, manual refresh, and traffic status badge | Sidebar |
 | **Persistence** | Dual-Store Auto-Sync | Reconciles `slots.json` against active rows in `parking_data.csv` on every load | `synchronize_slots()` |
@@ -123,10 +123,10 @@ sequenceDiagram
     </tr>
     <tr>
       <th>Quick Controls &amp; Status</th>
-      <th><code>⬅️ Vehicle Entry</code></th>
-      <th><code>➡️ Vehicle Exit</code></th>
-      <th><code>🅿️ Slot Status</code></th>
-      <th><code>📊 Analytics Dashboard</code></th>
+      <th><code>Vehicle Entry</code></th>
+      <th><code>Vehicle Exit</code></th>
+      <th><code>Slot Status</code></th>
+      <th><code>Analytics Dashboard</code></th>
     </tr>
   </thead>
   <tbody>
@@ -134,7 +134,7 @@ sequenceDiagram
       <td>
         • <b>Quick Stats:</b> Available/Total Slots, Today Revenue, Total Revenue<br>
         • <b>System Configuration:</b> Rate (<code>₹20/hour</code>), Live Date &amp; Time<br>
-        • <b>Actions:</b> <code>🔄 Refresh</code>, <code>📈 Stats</code><br>
+        • <b>Actions:</b> <code>Refresh</code>, <code>Stats</code><br>
         • <b>System Status:</b> Dynamic Traffic Load Badge
       </td>
       <td>
@@ -171,23 +171,23 @@ The **Slot Status** tab renders a 5-column × 2-row visual grid (`st.columns(5)`
 <table>
   <thead>
     <tr>
-      <th colspan="5" align="center">🅿️ Interactive Parking Lot Layout (Priority Order: P1 → P10)</th>
+      <th colspan="5" align="center"> Interactive Parking Lot Layout (Priority Order: P1 → P10)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td align="center"><b>P1</b> (Priority 1)<br>🟢 Available / 🔴 Occupied</td>
-      <td align="center"><b>P2</b> (Priority 2)<br>🟢 Available / 🔴 Occupied</td>
-      <td align="center"><b>P3</b> (Priority 3)<br>🟢 Available / 🔴 Occupied</td>
-      <td align="center"><b>P4</b> (Priority 4)<br>🟢 Available / 🔴 Occupied</td>
-      <td align="center"><b>P5</b> (Priority 5)<br>🟢 Available / 🔴 Occupied</td>
+      <td align="center"><b>P1</b> (Priority 1)<br>Available / Occupied</td>
+      <td align="center"><b>P2</b> (Priority 2)<br>Available / Occupied</td>
+      <td align="center"><b>P3</b> (Priority 3)<br>Available / Occupied</td>
+      <td align="center"><b>P4</b> (Priority 4)<br>Available / Occupied</td>
+      <td align="center"><b>P5</b> (Priority 5)<br>Available / Occupied</td>
     </tr>
     <tr>
-      <td align="center"><b>P6</b> (Priority 6)<br>🟢 Available / 🔴 Occupied</td>
-      <td align="center"><b>P7</b> (Priority 7)<br>🟢 Available / 🔴 Occupied</td>
-      <td align="center"><b>P8</b> (Priority 8)<br>🟢 Available / 🔴 Occupied</td>
-      <td align="center"><b>P9</b> (Priority 9)<br>🟢 Available / 🔴 Occupied</td>
-      <td align="center"><b>P10</b> (Priority 10)<br>🟢 Available / 🔴 Occupied</td>
+      <td align="center"><b>P6</b> (Priority 6)<br>Available / Occupied</td>
+      <td align="center"><b>P7</b> (Priority 7)<br>Available / Occupied</td>
+      <td align="center"><b>P8</b> (Priority 8)<br>Available / Occupied</td>
+      <td align="center"><b>P9</b> (Priority 9)<br>Available / Occupied</td>
+      <td align="center"><b>P10</b> (Priority 10)<br>Available / Occupied</td>
     </tr>
   </tbody>
 </table>
@@ -224,7 +224,7 @@ stateDiagram-v2
 | :--- | :--- | :--- |
 | **Tab 1: Vehicle Entry** | `st.text_input` (`TN09AB1234`), `st.date_input`, `st.time_input`, primary button | Warns if empty (`⚠️`), balloons + success on allocation (`✅`), error when all 10 slots full (`❌`) |
 | **Tab 2: Vehicle Exit** | `st.text_input` (`exit_vehicle`), `st.date_input`, `st.time_input`, primary button | Displays `Slot Released`, `Parking Duration` (`{hours:.1f} hours`), and `Parking Fee` (`₹{fee}`); errors if no active stay |
-| **Tab 3: Slot Status** | 3 HTML KPI cards, 5-column slot card grid, `st.dataframe(slots_df)` | Shows `🔴 Occupied` (`(Vehicle)`) vs `🟢 Available` in real time |
+| **Tab 3: Slot Status** | 3 HTML KPI cards, 5-column slot card grid, `st.dataframe(slots_df)` | Shows `Occupied` (`(Vehicle)`) vs `Available` in real time |
 | **Tab 4: Analytics Dashboard** | 5 KPI cards, 2 Plotly charts, Top-10 history table, Day-wise revenue table, 3 summary cards | Formats duration (`In Progress`, `Xh Ym`, `Xh`, `Ym`); shows info alert if no completed stays exist |
 | **Sidebar Control Panel** | `st.metric` cards, Fee &amp; Clock HTML cards, `Refresh` &amp; `Stats` buttons, pulsing traffic indicator | `Refresh` reloads JSON/CSV + runs `st.rerun()`; `Stats` prompts user to open Tab 4 |
 
@@ -505,7 +505,7 @@ AP09NV2345,P1,2026-03-15 20:08:39,2026-03-15 20:09:30,0.01,20,2026-03-15
 | :--- | :--- | :--- | :--- |
 | **Port Conflict** | Streamlit fails to bind to `8501` | Another process is already using port `8501` | Run `streamlit run app.py --server.port 8502` |
 | **Missing Packages** | `ModuleNotFoundError` on launch | Virtual environment inactive or packages missing | Activate `.venv` and run `pip install -r requirements.txt` |
-| **Stale Slot Status** | UI shows wrong slot state after manual file edit | In-memory `st.session_state` needs reload | Click `🔄 Refresh` in the Sidebar Control Panel |
+| **Stale Slot Status** | UI shows wrong slot state after manual file edit | In-memory `st.session_state` needs reload | Click `Refresh` in the Sidebar Control Panel |
 | **File Write Error** | `PermissionError` on entry/exit | Read-only permissions on `slots.json` or `parking_data.csv` | Grant write permissions or close spreadsheet apps locking CSV |
 
 ### Planned Enhancements
@@ -528,10 +528,3 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for full terms (
 | **Madhan Mohan Reddy** | **Email** | [madhanmohanreddyperam06@gmail.com](mailto:madhanmohanreddyperam06@gmail.com) |
 | **Madhan Mohan Reddy** | **Mobile** | `+91 9110395993` |
 
----
-
-<div align="center">
-
-***Developed with ❤️ for Smart Parking Solutions***
-
-</div>
