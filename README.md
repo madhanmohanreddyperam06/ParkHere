@@ -534,6 +534,6 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE)
 
 ---
 <div align="center">
-© 2026 Campus Finder. All rights reserved.
+© 2026 ParkHere. All rights reserved.
 </div>
 
